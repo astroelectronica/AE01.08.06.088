@@ -1,0 +1,636 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Xlamp XB-D white 7S3P"
+Date "2020-08-08"
+Rev "1"
+Comp "astroelectronic@"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5E5FD314
+P 6000 7000
+F 0 "#FLG02" H 6000 7075 50  0001 C CNN
+F 1 "PWR_FLAG" H 6000 7173 50  0000 C CNN
+F 2 "" H 6000 7000 50  0001 C CNN
+F 3 "~" H 6000 7000 50  0001 C CNN
+	1    6000 7000
+	1    0    0    -1  
+$EndComp
+Text Label 1600 3750 0    50   ~ 0
+IN
+$Comp
+L pspice:0 #GND03
+U 1 1 5E66CD3A
+P 10400 4000
+F 0 "#GND03" H 10400 3900 50  0001 C CNN
+F 1 "0" H 10400 3877 50  0000 C CNN
+F 2 "" H 10400 4000 50  0001 C CNN
+F 3 "~" H 10400 4000 50  0001 C CNN
+	1    10400 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10400 3750 10400 4000
+Wire Wire Line
+	10400 3750 9900 3750
+$Comp
+L pspice:0 #GND02
+U 1 1 5F35138D
+P 6000 7500
+F 0 "#GND02" H 6000 7400 50  0001 C CNN
+F 1 "0" H 6000 7377 50  0000 C CNN
+F 2 "" H 6000 7500 50  0001 C CNN
+F 3 "~" H 6000 7500 50  0001 C CNN
+	1    6000 7500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 7500 6000 7000
+Wire Wire Line
+	1300 3750 1300 3850
+Connection ~ 1300 3750
+Wire Wire Line
+	2000 3750 1300 3750
+Wire Wire Line
+	1300 3650 1300 3750
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5E5FDFB1
+P 1300 3650
+F 0 "#FLG01" H 1300 3725 50  0001 C CNN
+F 1 "PWR_FLAG" H 1300 3823 50  0000 C CNN
+F 2 "" H 1300 3650 50  0001 C CNN
+F 3 "~" H 1300 3650 50  0001 C CNN
+	1    1300 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 4250 1300 4350
+$Comp
+L Simulation_SPICE:VDC V1
+U 1 1 5E5FAC3F
+P 1300 4050
+F 0 "V1" H 1430 4096 50  0000 L CNN
+F 1 "{VIN}" H 1430 4005 50  0000 L CNN
+F 2 "" H 1300 4050 50  0001 C CNN
+F 3 "~" H 1300 4050 50  0001 C CNN
+F 4 "Y" H 1300 4050 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "V" H 1300 4050 50  0001 L CNN "Spice_Primitive"
+	1    1300 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND01
+U 1 1 5E5FCC84
+P 1300 4350
+F 0 "#GND01" H 1300 4250 50  0001 C CNN
+F 1 "0" H 1300 4227 50  0000 C CNN
+F 2 "" H 1300 4350 50  0001 C CNN
+F 3 "~" H 1300 4350 50  0001 C CNN
+	1    1300 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 3500 2000 3500
+Wire Wire Line
+	2500 3500 2700 3500
+Wire Wire Line
+	2500 4000 2700 4000
+Wire Wire Line
+	2200 4000 2000 4000
+Wire Wire Line
+	2700 4000 2700 3750
+$Comp
+L AE01.17.06.000:XB-DWHT D1
+U 1 1 5F2BFD4B
+P 2350 3500
+F 0 "D1" H 2343 3245 50  0000 C CNN
+F 1 "XB-DWHT" H 2343 3336 50  0000 C CNN
+F 2 "" H 2350 3500 50  0001 C CNN
+F 3 "~" H 2350 3500 50  0001 C CNN
+F 4 "D" H 2350 3500 50  0001 C CNN "Spice_Primitive"
+F 5 "XB-DWHT" H 2350 3500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2350 3500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/XLamp-XBD-Spice.txt" H 2350 3500 50  0001 C CNN "Spice_Lib_File"
+	1    2350 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L AE01.17.06.000:XB-DWHT D2
+U 1 1 5F2C3757
+P 2350 4000
+F 0 "D2" H 2343 3745 50  0000 C CNN
+F 1 "XB-DWHT" H 2343 3836 50  0000 C CNN
+F 2 "" H 2350 4000 50  0001 C CNN
+F 3 "~" H 2350 4000 50  0001 C CNN
+F 4 "D" H 2350 4000 50  0001 C CNN "Spice_Primitive"
+F 5 "XB-DWHT" H 2350 4000 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2350 4000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/XLamp-XBD-Spice.txt" H 2350 4000 50  0001 C CNN "Spice_Lib_File"
+	1    2350 4000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2500 4500 2700 4500
+Wire Wire Line
+	2200 4500 2000 4500
+Wire Wire Line
+	2700 4500 2700 4000
+Connection ~ 2700 4000
+Connection ~ 2000 4000
+Wire Wire Line
+	2000 4000 2000 4500
+Text Label 2750 3750 0    50   ~ 0
+BRANCH01
+Wire Wire Line
+	3200 3750 2700 3750
+Connection ~ 2700 3750
+Wire Wire Line
+	2700 3750 2700 3500
+Wire Wire Line
+	3400 3500 3200 3500
+Wire Wire Line
+	3700 3500 3900 3500
+Wire Wire Line
+	3700 4000 3900 4000
+Wire Wire Line
+	3400 4000 3200 4000
+Wire Wire Line
+	3900 4000 3900 3750
+$Comp
+L AE01.17.06.000:XB-DWHT D4
+U 1 1 5F2DCDDA
+P 3550 3500
+F 0 "D4" H 3543 3245 50  0000 C CNN
+F 1 "XB-DWHT" H 3543 3336 50  0000 C CNN
+F 2 "" H 3550 3500 50  0001 C CNN
+F 3 "~" H 3550 3500 50  0001 C CNN
+F 4 "D" H 3550 3500 50  0001 C CNN "Spice_Primitive"
+F 5 "XB-DWHT" H 3550 3500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3550 3500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/XLamp-XBD-Spice.txt" H 3550 3500 50  0001 C CNN "Spice_Lib_File"
+	1    3550 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L AE01.17.06.000:XB-DWHT D5
+U 1 1 5F2DCDE4
+P 3550 4000
+F 0 "D5" H 3543 3745 50  0000 C CNN
+F 1 "XB-DWHT" H 3543 3836 50  0000 C CNN
+F 2 "" H 3550 4000 50  0001 C CNN
+F 3 "~" H 3550 4000 50  0001 C CNN
+F 4 "D" H 3550 4000 50  0001 C CNN "Spice_Primitive"
+F 5 "XB-DWHT" H 3550 4000 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3550 4000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/XLamp-XBD-Spice.txt" H 3550 4000 50  0001 C CNN "Spice_Lib_File"
+	1    3550 4000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3700 4500 3900 4500
+Wire Wire Line
+	3400 4500 3200 4500
+Wire Wire Line
+	3900 4500 3900 4000
+Connection ~ 3900 4000
+Connection ~ 3200 4000
+Wire Wire Line
+	3200 4000 3200 4500
+Text Label 3950 3750 0    50   ~ 0
+BRANCH02
+Wire Wire Line
+	4400 3750 3900 3750
+Connection ~ 3900 3750
+Wire Wire Line
+	3900 3750 3900 3500
+Wire Wire Line
+	3200 3500 3200 3750
+Connection ~ 3200 3750
+Wire Wire Line
+	3200 3750 3200 4000
+Wire Wire Line
+	4600 3500 4400 3500
+Wire Wire Line
+	4900 3500 5100 3500
+Wire Wire Line
+	4900 4000 5100 4000
+Wire Wire Line
+	4600 4000 4400 4000
+Wire Wire Line
+	5100 4000 5100 3750
+$Comp
+L AE01.17.06.000:XB-DWHT D7
+U 1 1 5F2ED09A
+P 4750 3500
+F 0 "D7" H 4743 3245 50  0000 C CNN
+F 1 "XB-DWHT" H 4743 3336 50  0000 C CNN
+F 2 "" H 4750 3500 50  0001 C CNN
+F 3 "~" H 4750 3500 50  0001 C CNN
+F 4 "D" H 4750 3500 50  0001 C CNN "Spice_Primitive"
+F 5 "XB-DWHT" H 4750 3500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4750 3500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/XLamp-XBD-Spice.txt" H 4750 3500 50  0001 C CNN "Spice_Lib_File"
+	1    4750 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L AE01.17.06.000:XB-DWHT D8
+U 1 1 5F2ED0A4
+P 4750 4000
+F 0 "D8" H 4743 3745 50  0000 C CNN
+F 1 "XB-DWHT" H 4743 3836 50  0000 C CNN
+F 2 "" H 4750 4000 50  0001 C CNN
+F 3 "~" H 4750 4000 50  0001 C CNN
+F 4 "D" H 4750 4000 50  0001 C CNN "Spice_Primitive"
+F 5 "XB-DWHT" H 4750 4000 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4750 4000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/XLamp-XBD-Spice.txt" H 4750 4000 50  0001 C CNN "Spice_Lib_File"
+	1    4750 4000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4900 4500 5100 4500
+Wire Wire Line
+	4600 4500 4400 4500
+Wire Wire Line
+	5100 4500 5100 4000
+Connection ~ 5100 4000
+Connection ~ 4400 4000
+Wire Wire Line
+	4400 4000 4400 4500
+Text Label 5150 3750 0    50   ~ 0
+BRANCH03
+Wire Wire Line
+	5600 3750 5100 3750
+Connection ~ 5100 3750
+Wire Wire Line
+	5100 3750 5100 3500
+Wire Wire Line
+	4400 3500 4400 3750
+Connection ~ 4400 3750
+Wire Wire Line
+	4400 3750 4400 4000
+Wire Wire Line
+	5800 3500 5600 3500
+Wire Wire Line
+	6100 3500 6300 3500
+Wire Wire Line
+	6100 4000 6300 4000
+Wire Wire Line
+	5800 4000 5600 4000
+Wire Wire Line
+	6300 4000 6300 3750
+$Comp
+L AE01.17.06.000:XB-DWHT D10
+U 1 1 5F2F2DEF
+P 5950 3500
+F 0 "D10" H 5943 3245 50  0000 C CNN
+F 1 "XB-DWHT" H 5943 3336 50  0000 C CNN
+F 2 "" H 5950 3500 50  0001 C CNN
+F 3 "~" H 5950 3500 50  0001 C CNN
+F 4 "D" H 5950 3500 50  0001 C CNN "Spice_Primitive"
+F 5 "XB-DWHT" H 5950 3500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5950 3500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/XLamp-XBD-Spice.txt" H 5950 3500 50  0001 C CNN "Spice_Lib_File"
+	1    5950 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L AE01.17.06.000:XB-DWHT D11
+U 1 1 5F2F2DF9
+P 5950 4000
+F 0 "D11" H 5943 3745 50  0000 C CNN
+F 1 "XB-DWHT" H 5943 3836 50  0000 C CNN
+F 2 "" H 5950 4000 50  0001 C CNN
+F 3 "~" H 5950 4000 50  0001 C CNN
+F 4 "D" H 5950 4000 50  0001 C CNN "Spice_Primitive"
+F 5 "XB-DWHT" H 5950 4000 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5950 4000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/XLamp-XBD-Spice.txt" H 5950 4000 50  0001 C CNN "Spice_Lib_File"
+	1    5950 4000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6100 4500 6300 4500
+Wire Wire Line
+	5800 4500 5600 4500
+Wire Wire Line
+	6300 4500 6300 4000
+Connection ~ 6300 4000
+Connection ~ 5600 4000
+Wire Wire Line
+	5600 4000 5600 4500
+Text Label 6350 3750 0    50   ~ 0
+BRANCH04
+Wire Wire Line
+	6800 3750 6300 3750
+Connection ~ 6300 3750
+Wire Wire Line
+	6300 3750 6300 3500
+Wire Wire Line
+	5600 3500 5600 3750
+Connection ~ 5600 3750
+Wire Wire Line
+	5600 3750 5600 4000
+Wire Wire Line
+	7000 3500 6800 3500
+Wire Wire Line
+	7300 3500 7500 3500
+Wire Wire Line
+	7300 4000 7500 4000
+Wire Wire Line
+	7000 4000 6800 4000
+Wire Wire Line
+	7500 4000 7500 3750
+$Comp
+L AE01.17.06.000:XB-DWHT D13
+U 1 1 5F2F9946
+P 7150 3500
+F 0 "D13" H 7143 3245 50  0000 C CNN
+F 1 "XB-DWHT" H 7143 3336 50  0000 C CNN
+F 2 "" H 7150 3500 50  0001 C CNN
+F 3 "~" H 7150 3500 50  0001 C CNN
+F 4 "D" H 7150 3500 50  0001 C CNN "Spice_Primitive"
+F 5 "XB-DWHT" H 7150 3500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7150 3500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/XLamp-XBD-Spice.txt" H 7150 3500 50  0001 C CNN "Spice_Lib_File"
+	1    7150 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L AE01.17.06.000:XB-DWHT D14
+U 1 1 5F2F9950
+P 7150 4000
+F 0 "D14" H 7143 3745 50  0000 C CNN
+F 1 "XB-DWHT" H 7143 3836 50  0000 C CNN
+F 2 "" H 7150 4000 50  0001 C CNN
+F 3 "~" H 7150 4000 50  0001 C CNN
+F 4 "D" H 7150 4000 50  0001 C CNN "Spice_Primitive"
+F 5 "XB-DWHT" H 7150 4000 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7150 4000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/XLamp-XBD-Spice.txt" H 7150 4000 50  0001 C CNN "Spice_Lib_File"
+	1    7150 4000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7300 4500 7500 4500
+Wire Wire Line
+	7000 4500 6800 4500
+Wire Wire Line
+	7500 4500 7500 4000
+Connection ~ 7500 4000
+Connection ~ 6800 4000
+Wire Wire Line
+	6800 4000 6800 4500
+Text Label 7550 3750 0    50   ~ 0
+BRANCH05
+Wire Wire Line
+	8000 3750 7500 3750
+Connection ~ 7500 3750
+Wire Wire Line
+	7500 3750 7500 3500
+Wire Wire Line
+	6800 3500 6800 3750
+Connection ~ 6800 3750
+Wire Wire Line
+	6800 3750 6800 4000
+Wire Wire Line
+	8200 3500 8000 3500
+Wire Wire Line
+	8500 3500 8700 3500
+Wire Wire Line
+	8500 4000 8700 4000
+Wire Wire Line
+	8200 4000 8000 4000
+$Comp
+L AE01.17.06.000:XB-DWHT D16
+U 1 1 5F301046
+P 8350 3500
+F 0 "D16" H 8343 3245 50  0000 C CNN
+F 1 "XB-DWHT" H 8343 3336 50  0000 C CNN
+F 2 "" H 8350 3500 50  0001 C CNN
+F 3 "~" H 8350 3500 50  0001 C CNN
+F 4 "D" H 8350 3500 50  0001 C CNN "Spice_Primitive"
+F 5 "XB-DWHT" H 8350 3500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8350 3500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/XLamp-XBD-Spice.txt" H 8350 3500 50  0001 C CNN "Spice_Lib_File"
+	1    8350 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L AE01.17.06.000:XB-DWHT D17
+U 1 1 5F301050
+P 8350 4000
+F 0 "D17" H 8343 3745 50  0000 C CNN
+F 1 "XB-DWHT" H 8343 3836 50  0000 C CNN
+F 2 "" H 8350 4000 50  0001 C CNN
+F 3 "~" H 8350 4000 50  0001 C CNN
+F 4 "D" H 8350 4000 50  0001 C CNN "Spice_Primitive"
+F 5 "XB-DWHT" H 8350 4000 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8350 4000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/XLamp-XBD-Spice.txt" H 8350 4000 50  0001 C CNN "Spice_Lib_File"
+	1    8350 4000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8500 4500 8700 4500
+Wire Wire Line
+	8200 4500 8000 4500
+Wire Wire Line
+	8700 4500 8700 4000
+Connection ~ 8700 4000
+Connection ~ 8000 4000
+Wire Wire Line
+	8000 4000 8000 4500
+Wire Wire Line
+	8000 3500 8000 3750
+Connection ~ 8000 3750
+Wire Wire Line
+	8000 3750 8000 4000
+$Comp
+L AE01.17.06.000:XB-DWHT D3
+U 1 1 5F2EACCD
+P 2350 4500
+F 0 "D3" H 2343 4245 50  0000 C CNN
+F 1 "XB-DWHT" H 2343 4336 50  0000 C CNN
+F 2 "" H 2350 4500 50  0001 C CNN
+F 3 "~" H 2350 4500 50  0001 C CNN
+F 4 "D" H 2350 4500 50  0001 C CNN "Spice_Primitive"
+F 5 "XB-DWHT" H 2350 4500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2350 4500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/XLamp-XBD-Spice.txt" H 2350 4500 50  0001 C CNN "Spice_Lib_File"
+	1    2350 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L AE01.17.06.000:XB-DWHT D6
+U 1 1 5F2EB1A0
+P 3550 4500
+F 0 "D6" H 3543 4245 50  0000 C CNN
+F 1 "XB-DWHT" H 3543 4336 50  0000 C CNN
+F 2 "" H 3550 4500 50  0001 C CNN
+F 3 "~" H 3550 4500 50  0001 C CNN
+F 4 "D" H 3550 4500 50  0001 C CNN "Spice_Primitive"
+F 5 "XB-DWHT" H 3550 4500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3550 4500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/XLamp-XBD-Spice.txt" H 3550 4500 50  0001 C CNN "Spice_Lib_File"
+	1    3550 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L AE01.17.06.000:XB-DWHT D9
+U 1 1 5F2EB6F9
+P 4750 4500
+F 0 "D9" H 4743 4245 50  0000 C CNN
+F 1 "XB-DWHT" H 4743 4336 50  0000 C CNN
+F 2 "" H 4750 4500 50  0001 C CNN
+F 3 "~" H 4750 4500 50  0001 C CNN
+F 4 "D" H 4750 4500 50  0001 C CNN "Spice_Primitive"
+F 5 "XB-DWHT" H 4750 4500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4750 4500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/XLamp-XBD-Spice.txt" H 4750 4500 50  0001 C CNN "Spice_Lib_File"
+	1    4750 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L AE01.17.06.000:XB-DWHT D12
+U 1 1 5F2EC060
+P 5950 4500
+F 0 "D12" H 5943 4245 50  0000 C CNN
+F 1 "XB-DWHT" H 5943 4336 50  0000 C CNN
+F 2 "" H 5950 4500 50  0001 C CNN
+F 3 "~" H 5950 4500 50  0001 C CNN
+F 4 "D" H 5950 4500 50  0001 C CNN "Spice_Primitive"
+F 5 "XB-DWHT" H 5950 4500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5950 4500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/XLamp-XBD-Spice.txt" H 5950 4500 50  0001 C CNN "Spice_Lib_File"
+	1    5950 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L AE01.17.06.000:XB-DWHT D15
+U 1 1 5F2EC946
+P 7150 4500
+F 0 "D15" H 7143 4245 50  0000 C CNN
+F 1 "XB-DWHT" H 7143 4336 50  0000 C CNN
+F 2 "" H 7150 4500 50  0001 C CNN
+F 3 "~" H 7150 4500 50  0001 C CNN
+F 4 "D" H 7150 4500 50  0001 C CNN "Spice_Primitive"
+F 5 "XB-DWHT" H 7150 4500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7150 4500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/XLamp-XBD-Spice.txt" H 7150 4500 50  0001 C CNN "Spice_Lib_File"
+	1    7150 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L AE01.17.06.000:XB-DWHT D18
+U 1 1 5F2ECE08
+P 8350 4500
+F 0 "D18" H 8343 4245 50  0000 C CNN
+F 1 "XB-DWHT" H 8343 4336 50  0000 C CNN
+F 2 "" H 8350 4500 50  0001 C CNN
+F 3 "~" H 8350 4500 50  0001 C CNN
+F 4 "D" H 8350 4500 50  0001 C CNN "Spice_Primitive"
+F 5 "XB-DWHT" H 8350 4500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8350 4500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/XLamp-XBD-Spice.txt" H 8350 4500 50  0001 C CNN "Spice_Lib_File"
+	1    8350 4500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9400 3500 9200 3500
+Wire Wire Line
+	9700 3500 9900 3500
+Wire Wire Line
+	9700 4000 9900 4000
+Wire Wire Line
+	9400 4000 9200 4000
+$Comp
+L AE01.17.06.000:XB-DWHT D19
+U 1 1 5F2F5F36
+P 9550 3500
+F 0 "D19" H 9543 3245 50  0000 C CNN
+F 1 "XB-DWHT" H 9543 3336 50  0000 C CNN
+F 2 "" H 9550 3500 50  0001 C CNN
+F 3 "~" H 9550 3500 50  0001 C CNN
+F 4 "D" H 9550 3500 50  0001 C CNN "Spice_Primitive"
+F 5 "XB-DWHT" H 9550 3500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9550 3500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/XLamp-XBD-Spice.txt" H 9550 3500 50  0001 C CNN "Spice_Lib_File"
+	1    9550 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L AE01.17.06.000:XB-DWHT D20
+U 1 1 5F2F5F40
+P 9550 4000
+F 0 "D20" H 9543 3745 50  0000 C CNN
+F 1 "XB-DWHT" H 9543 3836 50  0000 C CNN
+F 2 "" H 9550 4000 50  0001 C CNN
+F 3 "~" H 9550 4000 50  0001 C CNN
+F 4 "D" H 9550 4000 50  0001 C CNN "Spice_Primitive"
+F 5 "XB-DWHT" H 9550 4000 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9550 4000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/XLamp-XBD-Spice.txt" H 9550 4000 50  0001 C CNN "Spice_Lib_File"
+	1    9550 4000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9700 4500 9900 4500
+Wire Wire Line
+	9400 4500 9200 4500
+Wire Wire Line
+	9900 4500 9900 4000
+Connection ~ 9900 4000
+Connection ~ 9200 4000
+Wire Wire Line
+	9200 4000 9200 4500
+$Comp
+L AE01.17.06.000:XB-DWHT D21
+U 1 1 5F2F5F58
+P 9550 4500
+F 0 "D21" H 9543 4245 50  0000 C CNN
+F 1 "XB-DWHT" H 9543 4336 50  0000 C CNN
+F 2 "" H 9550 4500 50  0001 C CNN
+F 3 "~" H 9550 4500 50  0001 C CNN
+F 4 "D" H 9550 4500 50  0001 C CNN "Spice_Primitive"
+F 5 "XB-DWHT" H 9550 4500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9550 4500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/XLamp-XBD-Spice.txt" H 9550 4500 50  0001 C CNN "Spice_Lib_File"
+	1    9550 4500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9200 3750 9200 4000
+Wire Wire Line
+	9200 3500 9200 3750
+Connection ~ 9200 3750
+Wire Wire Line
+	9200 3750 8700 3750
+Text Label 8750 3750 0    50   ~ 0
+BRANCH06
+Wire Wire Line
+	8700 3500 8700 3750
+Connection ~ 8700 3750
+Wire Wire Line
+	8700 3750 8700 4000
+Wire Wire Line
+	9900 3500 9900 3750
+Wire Wire Line
+	2000 3500 2000 3750
+Connection ~ 9900 3750
+Wire Wire Line
+	9900 3750 9900 4000
+Connection ~ 2000 3750
+Wire Wire Line
+	2000 3750 2000 4000
+$EndSCHEMATC
